@@ -1,0 +1,24 @@
+{
+  "name": "simplesurvey",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IanConery/simpleSurvey.git"
+  },
+  "author": "Ian Conery",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/IanConery/simpleSurvey/issues"
+  },
+  "homepage": "https://github.com/IanConery/simpleSurvey#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "lodash": "^4.17.11"
+  }
+}
