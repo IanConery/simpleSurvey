@@ -7,7 +7,7 @@ const readFile = promisify(fs.readFile);
 
 exports.checkForMissingAgs = (queryObj, required) => {
   const missingArgs = _.compact(required.map((arg) => {
-    if (!queryObj[arg]) {
+    if (!queryObj[arg] && queryObj[arg] !== 0) {
       return arg;
     }
   }));
@@ -39,7 +39,7 @@ exports.getResultsById = async (filePath, id) => {
 
 exports.getSurveyById = async (filePath, id) => {
   const data = await this.getSurveys(filePath);
-  const survey = data.filter((surveyObj) => surveyObj.id.toString() === id);
+  const survey = data.filter((surveyObj) => surveyObj.id.toString() === id.toString());
   if (survey.length === 0){
     throw new Error(`No survey exists with id: ${id}`);
   } else {
